@@ -1,6 +1,5 @@
 import { Server } from "http";
 import app from "./app";
-import config from "./config/env";
 import envVariables from "./config/env";
 
 async function bootstrap() {
