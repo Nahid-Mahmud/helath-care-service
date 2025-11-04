@@ -4,6 +4,6 @@ import { UserController } from "./user.controller";
 const router = Router();
 
 // Create a user
-router.post("/users", UserController.CreateUser);
+router.post("/create-user", UserController.CreateUser);
 
 export const userRoutes = router;

@@ -23,6 +23,12 @@ app.use(cookieParser());
 
 app.use("/api/v1", router);
 
+app.use("/api/v1", (req: Request, res: Response) => {
+  res.send({
+    message: "API v1",
+  });
+});
+
 app.get("/", (req: Request, res: Response) => {
   res.send({
     message: "Server is running..",
