@@ -5,19 +5,19 @@ import { catchAsync } from "../../utils/catchAsync";
 import sendResponse from "../../utils/sendResponse";
 import { UserService } from "./user.service";
 
-const CreatePatient = catchAsync(async (req: Request, res: Response) => {
+const CreateUser = catchAsync(async (req: Request, res: Response) => {
   const payload = req.body;
 
-  const result = await UserService.CreatePatient(payload);
+  const result = await UserService.CreateUser(payload);
 
   sendResponse(res, {
     success: true,
-    message: "Patient created successfully",
+    message: "User created successfully",
     data: result ?? null,
     statusCode: StatusCodes.CREATED,
   });
 });
 
 export const UserController = {
-  CreatePatient,
+  CreateUser,
 };
