@@ -7,7 +7,6 @@ import {
   PrismaClientInitializationError,
   PrismaClientRustPanicError,
 } from "@prisma/client/runtime/library";
-import envVariables from "../../config/env";
 
 const globalErrorHandler = (err: any, req: Request, res: Response, next: NextFunction) => {
   let statusCode = StatusCodes.INTERNAL_SERVER_ERROR;
